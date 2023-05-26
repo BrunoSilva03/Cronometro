@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Relogio Clock';
+    src: url(fontes/DS-DIGI.TTF) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+
+    
+    p#temporizador {
+        text-align: center;
+        font-family: 'Relogio Clock';
+        font-size: 6em;
+        margin-top: 40%;
+    }
+
+    section#botoes {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 3em;
+    }
+
+    button {
+        padding: 33px;
+    }
+
+    button#iniciar {
+        width: 33%;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    button#finalizar {
+        width: 33%;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+    p#temporizador {
+        text-align: center;
+        font-family: 'Relogio Clock';
+        font-size: 6em;
+        margin-top: 30%;
+    }
+
+    section#botoes {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 3em;
+    }
+
+    button {
+        padding: 33px;
+    }
+
+    button#iniciar {
+        width: 33%;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    button#finalizar {
+        width: 33%;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+    p#temporizador {
+        text-align: center;
+        font-family: 'Relogio Clock';
+        font-size: 9em;
+        margin-top: 20%;
+    }
+
+    section#botoes {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 3em;
+    }
+
+    button {
+        padding: 33px;
+    }
+
+    button#iniciar {
+        width: 33%;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    button#finalizar {
+        width: 33%;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+}
+
+
+@media (min-width: 993px) {
+    p#temporizador {
+        text-align: center;
+        font-family: 'Relogio Clock';
+        font-size: 10em;
+        margin-top: 10%;
+    }
+    
+    section#botoes {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 3em;
+    }
+    
+    button {
+        padding: 33px;
+    }
+    
+    button#iniciar {
+        width: 25%;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    
+    
+    button#finalizar {
+        width: 25%;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    
+}
+
+
+
