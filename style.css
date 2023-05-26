@@ -31,6 +31,9 @@
         margin-top: 3em;
     }
 
+
+    
+
     button {
         padding: 33px;
     }
@@ -43,10 +46,26 @@
         border-radius: 3px;
     }
 
+    
 
     button#finalizar {
         width: 33%;
         background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    section#botao3 {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+
+    button#parar {
+        width: 33%;
+        background-color: rgb(11, 151, 221);
         color: white;
         border: none;
         border-radius: 3px;
@@ -58,7 +77,7 @@
     p#temporizador {
         text-align: center;
         font-family: 'Relogio Clock';
-        font-size: 6em;
+        font-size: 9em;
         margin-top: 30%;
     }
 
@@ -89,6 +108,21 @@
         border: none;
         border-radius: 3px;
     }
+
+
+    section#botao3 {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+
+    button#parar {
+        width: 33%;
+        background-color: rgb(11, 151, 221);
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
 }
 
 
@@ -98,6 +132,7 @@
         font-family: 'Relogio Clock';
         font-size: 9em;
         margin-top: 20%;
+        
     }
 
     section#botoes {
@@ -123,6 +158,21 @@
     button#finalizar {
         width: 33%;
         background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    section#botao3 {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+
+    button#parar {
+        width: 33%;
+        background-color: rgb(11, 151, 221);
         color: white;
         border: none;
         border-radius: 3px;
@@ -165,8 +215,34 @@
         border: none;
         border-radius: 3px;
     }
+
+
+    section#botao3 {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+
+    button#parar {
+        width: 33%;
+        background-color: rgb(11, 151, 221);
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
     
 }
 
 
+button#iniciar:hover {
+    background-color: rgb(0, 101, 0);
+}
 
+
+button#finalizar:hover {
+    background-color: rgb(196, 0, 0);
+}
+
+button#parar:hover {
+    background-color: rgb(8, 127, 187);
+}
