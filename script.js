@@ -36,7 +36,7 @@ function iniciarContagem() {
             window.document.getElementById('segundos').innerHTML = soma;
         }
 
-    }, 1);
+    }, 1000);
 
 }
 
