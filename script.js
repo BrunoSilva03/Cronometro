@@ -1,16 +1,19 @@
 let buttonIniciar = window.document.getElementById('iniciar');
 let buttonFinalizar = window.document.getElementById('finalizar');
 let buttonReiniciar = window.document.getElementById('reiniciar');
+let buttonRetornar = window.document.getElementById('retornar');
 
 buttonIniciar.addEventListener('click', iniciarContagem);
 buttonFinalizar.addEventListener('click', finalizarContagem);
 buttonReiniciar.addEventListener('click', reiniciarContagem);
-
+buttonRetornar.addEventListener('click', retornarContagem);
+tempo = undefined;
 
 
 function iniciarContagem() {
 
-    tempoSegundos = setInterval(function () {
+    tempo = setInterval(function () {
+        window.document.getElementById('iniciar').hidden = true;
         window.document.getElementById('reiniciar').hidden = false;
         var segundos = window.document.getElementById('segundos').innerHTML;
         var soma = parseInt(segundos) + 1;
@@ -28,7 +31,7 @@ function iniciarContagem() {
             seg = "0";
             seg += soma;
             window.document.getElementById('segundos').innerHTML = seg;
-    
+
         } else {
             window.document.getElementById('segundos').innerHTML = soma;
         }
@@ -63,19 +66,19 @@ function maisUmaHora() {
     var horas = window.document.getElementById('horas').innerHTML;
     var doisPontos = window.document.getElementById('spandoispontos');
 
-    
+
 
     doisPontos.hidden = false;
     window.document.getElementById('horas').hidden = false;
 
     var somaHoras = parseInt(horas) + 1;
 
-    if(somaHoras >= 24) {
+    if (somaHoras >= 24) {
         somaHoras = 0;
         maisUmDia();
     }
 
-    if(somaHoras < 10) {
+    if (somaHoras < 10) {
         hor = window.document.getElementById('horas').innerHTML;
         hor = "0";
         hor += somaHoras;
@@ -96,12 +99,12 @@ function maisUmDia() {
 
     var somaDias = parseInt(dias) + 1;
 
-    if(somaDias >= 30) {
+    if (somaDias >= 30) {
         somaDias = 0;
         maisUmMes();
     }
 
-    if(somaDias < 10) {
+    if (somaDias < 10) {
         d = window.document.getElementById('dias').innerHTML;
         d = "0";
         d += somaDias;
@@ -123,12 +126,12 @@ function maisUmMes() {
 
     var somaMeses = parseInt(meses) + 1;
 
-    if(somaMeses >= 12) {
+    if (somaMeses >= 12) {
         somaMeses = 0;
         maisUmAno();
     }
 
-    if(somaMeses < 10) {
+    if (somaMeses < 10) {
         m = window.document.getElementById('meses').innerHTML;
         m = "0";
         m += somaMeses;
@@ -151,7 +154,7 @@ function maisUmAno() {
 
     var somaAnos = parseInt(anos) + 1;
 
-    if(somaAnos < 10) {
+    if (somaAnos < 10) {
         a = window.document.getElementById('anos').innerHTML;
         a = "0";
         a += somaAnos;
@@ -165,7 +168,27 @@ function maisUmAno() {
 
 
 function finalizarContagem() {
-    clearInterval(tempoSegundos);
+    if (typeof tempo === "undefined") {
+        console.log('achou')
+    } else {
+
+
+        clearInterval(tempo);
+
+        window.document.getElementById('finalizar').hidden = true;
+        window.document.getElementById('retornar').hidden = false;
+    }
+
+
+}
+
+
+function retornarContagem() {
+
+    window.document.getElementById('retornar').hidden = true;
+    window.document.getElementById('finalizar').hidden = false;
+
+    iniciarContagem();
 }
 
 
@@ -196,4 +219,8 @@ function zerarValoresTimer() {
     window.document.getElementById('segundos').innerHTML = "00";
 
     window.document.getElementById('reiniciar').hidden = true;
+    window.document.getElementById('retornar').hidden = true;
+    window.document.getElementById('iniciar').hidden = false;
+    window.document.getElementById('finalizar').hidden = false;
+    tempo = undefined;
 }

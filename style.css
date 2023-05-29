@@ -58,12 +58,6 @@
     }
 
 
-    section#botao3 {
-        text-align: center;
-        margin-top: 30px;
-    }
-
-
     button#reiniciar {
         width: 33%;
         background-color: rgb(11, 151, 221);
@@ -71,6 +65,16 @@
         border: none;
         border-radius: 3px;
     }
+
+
+    button#retornar {
+        width: 33%;
+        background-color: rgba(255, 213, 0, 0.793);
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    
 }
 
 
@@ -109,17 +113,20 @@
         border: none;
         border-radius: 3px;
     }
-
-
-    section#botao3 {
-        text-align: center;
-        margin-top: 30px;
-    }
     
 
     button#reiniciar {
         width: 33%;
         background-color: rgb(11, 151, 221);
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    button#retornar {
+        width: 33%;
+        background-color: rgba(255, 213, 0, 0.793);
         color: white;
         border: none;
         border-radius: 3px;
@@ -163,12 +170,6 @@
         border: none;
         border-radius: 3px;
     }
-
-
-    section#botao3 {
-        text-align: center;
-        margin-top: 30px;
-    }
     
 
     button#reiniciar {
@@ -178,10 +179,31 @@
         border: none;
         border-radius: 3px;
     }
+
+
+    button#retornar {
+        width: 33%;
+        background-color: rgba(255, 213, 0, 0.793);
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+    
 }
 
 
 @media (min-width: 993px) {
+
+    main {
+        width: 700px;
+        margin: auto;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     p#temporizador {
         text-align: center;
         font-family: 'Relogio Clock';
@@ -216,17 +238,20 @@
         border: none;
         border-radius: 3px;
     }
-
-
-    section#botao3 {
-        text-align: center;
-        margin-top: 30px;
-    }
     
 
     button#reiniciar {
-        width: 33%;
+        width: 25%;
         background-color: rgb(11, 151, 221);
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+
+
+    button#retornar {
+        width: 25%;
+        background-color: rgba(255, 213, 0, 0.793);
         color: white;
         border: none;
         border-radius: 3px;
@@ -234,10 +259,6 @@
     
 }
 
-
-span#timer {
-text-align: right;
-}
 
 
 button#iniciar:hover {
@@ -251,4 +272,8 @@ button#finalizar:hover {
 
 button#reiniciar:hover {
     background-color: rgb(8, 127, 187);
+}
+
+button#retornar:hover {
+    background-color: rgba(226, 189, 4, 0.793);
 }
