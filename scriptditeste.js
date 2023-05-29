@@ -11,29 +11,45 @@ function iniciarContagem() {
     setInterval(function () {
 
         var soma = parseInt(timer) + 1;
+        
         var minutos = false;
-
-        if (soma < 10 && minutos == false) {
+        if (soma < 10) {
             window.document.getElementById('timer').innerHTML = '00:0';
             window.document.getElementById('timer').innerHTML += soma;
-            timer = soma
+            timer = soma;
 
         }
 
-        if(soma >= 10 && minutos == false) {
+        if(soma >= 10) {
             window.document.getElementById('timer').innerHTML = '00:';
             window.document.getElementById('timer').innerHTML += soma;
             timer = soma;
         }
 
-        if(soma >= 60 && minutos == false) {
+        if(soma >= 60) {
             window.document.getElementById('timer').innerHTML = '01:00';
             soma = 0;
             timer = soma;
             acrescentaMinutos();
-
+            minutos = true;
         }
     }, 1000)
+}
+
+
+function acrescentaMinutos() {
+    var soma = parseInt(timer) + 1;
+
+    if(soma < 10) {
+        window.document.getElementById('timer').innerHTML = '0';
+        window.document.getElementById('timer').innerHTML += soma;
+        window.document.getElementById('timer').innerHTML += ':00';
+        timer = soma;
+    }
+
+    
+
+
 }
 
 
