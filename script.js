@@ -4,10 +4,11 @@ let buttonFinalizar = window.document.getElementById('finalizar');
 buttonIniciar.addEventListener('click', iniciarContagem);
 buttonFinalizar.addEventListener('click', finalizarContagem);
 
-var minutos = window.document.getElementById('minutos');
+
+
 function iniciarContagem() {
 
-    tempo = setInterval(function() {
+    tempoSegundos = setInterval(function() {
         var segundos = window.document.getElementById('segundos').innerHTML;
         var soma = parseInt(segundos) + 1;
 
@@ -17,12 +18,20 @@ function iniciarContagem() {
             soma = 0;
             maisUmMinuto();
         }
+        
 
-        if(soma <= 10) {
-            window.document.getElementById9('segundos').innerHTML = "0" + soma;
+        if(soma < 10) {
+            seg = window.document.getElementById('segundos').innerHTML;
+            seg = "0";
+            seg += soma;
+            window.document.getElementById('segundos').innerHTML = seg;
+            //window.document.getElementById9('segundos').innerHTML = "0" + soma;
         } else {
             window.document.getElementById('segundos').innerHTML = soma;
         }
+               
+
+        //window.document.getElementById('segundos').innerHTML = soma;
 
         
     },1000);
@@ -40,10 +49,12 @@ function iniciarContagem() {
 }
 
 function maisUmMinuto() {
-    
+    var minutos = window.document.getElementById('minutos').innerHTML;
+    var somaMinutos = parseInt(minutos) + 1;
+    window.document.getElementById('minutos').innerHTML = somaMinutos;
 }
 
 
 function finalizarContagem() {
-    clearInterval(tempo);
+    clearInterval(tempoSegundos);
 }
