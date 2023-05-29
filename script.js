@@ -1,14 +1,17 @@
 let buttonIniciar = window.document.getElementById('iniciar');
 let buttonFinalizar = window.document.getElementById('finalizar');
+let buttonReiniciar = window.document.getElementById('reiniciar');
 
 buttonIniciar.addEventListener('click', iniciarContagem);
 buttonFinalizar.addEventListener('click', finalizarContagem);
+buttonReiniciar.addEventListener('click', reiniciarContagem);
 
 
 
 function iniciarContagem() {
 
     tempoSegundos = setInterval(function () {
+        window.document.getElementById('reiniciar').hidden = false;
         var segundos = window.document.getElementById('segundos').innerHTML;
         var soma = parseInt(segundos) + 1;
 
@@ -77,12 +80,120 @@ function maisUmaHora() {
         hor = "0";
         hor += somaHoras;
         window.document.getElementById('horas').innerHTML = hor;
+        window.document.getElementById('horas').innerHTML += "h";
     } else {
         window.document.getElementById('horas').innerHTML = somaHoras;
+        window.document.getElementById('horas').innerHTML += "h";
+    }
+}
+
+function maisUmDia() {
+    var dias = window.document.getElementById('dias').innerHTML;
+    var doisPontosDias = window.document.getElementById('doispontosdias');
+
+    doisPontosDias.hidden = false;
+    window.document.getElementById('dias').hidden = false;
+
+    var somaDias = parseInt(dias) + 1;
+
+    if(somaDias >= 30) {
+        somaDias = 0;
+        maisUmMes();
+    }
+
+    if(somaDias < 10) {
+        d = window.document.getElementById('dias').innerHTML;
+        d = "0";
+        d += somaDias;
+        window.document.getElementById('dias').innerHTML = d;
+        window.document.getElementById('dias').innerHTML += "d";
+    } else {
+        window.document.getElementById('dias').innerHTML = somaDias;
+        window.document.getElementById('dias').innerHTML += "d";
+    }
+}
+
+
+function maisUmMes() {
+    var meses = window.document.getElementById('meses').innerHTML;
+    var doisPontosMeses = window.document.getElementById('doispontosmeses');
+
+    doisPontosMeses.hidden = false;
+    window.document.getElementById('meses').hidden = false;
+
+    var somaMeses = parseInt(meses) + 1;
+
+    if(somaMeses >= 12) {
+        somaMeses = 0;
+        maisUmAno();
+    }
+
+    if(somaMeses < 10) {
+        m = window.document.getElementById('meses').innerHTML;
+        m = "0";
+        m += somaMeses;
+        window.document.getElementById('meses').innerHTML = m;
+        window.document.getElementById('meses').innerHTML += "m";
+    } else {
+        window.document.getElementById('meses').innerHTML = somaMeses;
+        window.document.getElementById('meses').innerHTML += "m";
+    }
+}
+
+
+function maisUmAno() {
+    var anos = window.document.getElementById('anos').innerHTML;
+    var doisPontosAnos = window.document.getElementById('doispontosanos');
+
+
+    doisPontosAnos.hidden = false;
+    window.document.getElementById('anos').hidden = false;
+
+    var somaAnos = parseInt(anos) + 1;
+
+    if(somaAnos < 10) {
+        a = window.document.getElementById('anos').innerHTML;
+        a = "0";
+        a += somaAnos;
+        window.document.getElementById('anos').innerHTML = a;
+        window.document.getElementById('anos').innerHTML += "A";
+    } else {
+        window.document.getElementById('anos').innerHTML = somaAnos;
+        window.document.getElementById('anos').innerHTML += "A";
     }
 }
 
 
 function finalizarContagem() {
     clearInterval(tempoSegundos);
+}
+
+
+function reiniciarContagem() {
+    finalizarContagem();
+    window.document.getElementById('anos').hidden = true;
+    window.document.getElementById('doispontosanos').hidden = true;
+    window.document.getElementById('meses').hidden = true;
+    window.document.getElementById('doispontosmeses').hidden = true;
+    window.document.getElementById('dias').hidden = true;
+    window.document.getElementById('doispontosdias').hidden = true;
+    window.document.getElementById('horas').hidden = true;
+    window.document.getElementById('spandoispontos').hidden = true;
+
+    zerarValoresTimer();
+}
+
+function zerarValoresTimer() {
+    window.document.getElementById('anos').innerHTML = "00";
+    window.document.getElementById('doispontosanos').innerHTML = "00";
+    window.document.getElementById('meses').innerHTML = "00";
+    window.document.getElementById('doispontosmeses').innerHTML = "00";
+    window.document.getElementById('dias').innerHTML = "00";
+    window.document.getElementById('doispontosdias').innerHTML = "00";
+    window.document.getElementById('horas').innerHTML = "00";
+    window.document.getElementById('spandoispontos').innerHTML = "00";
+    window.document.getElementById('minutos').innerHTML = "00";
+    window.document.getElementById('segundos').innerHTML = "00";
+
+    window.document.getElementById('reiniciar').hidden = true;
 }

@@ -64,7 +64,7 @@
     }
 
 
-    button#parar {
+    button#reiniciar {
         width: 33%;
         background-color: rgb(11, 151, 221);
         color: white;
@@ -117,7 +117,7 @@
     }
     
 
-    button#parar {
+    button#reiniciar {
         width: 33%;
         background-color: rgb(11, 151, 221);
         color: white;
@@ -171,7 +171,7 @@
     }
     
 
-    button#parar {
+    button#reiniciar {
         width: 33%;
         background-color: rgb(11, 151, 221);
         color: white;
@@ -224,7 +224,7 @@
     }
     
 
-    button#parar {
+    button#reiniciar {
         width: 33%;
         background-color: rgb(11, 151, 221);
         color: white;
@@ -249,6 +249,6 @@ button#finalizar:hover {
     background-color: rgb(196, 0, 0);
 }
 
-button#parar:hover {
+button#reiniciar:hover {
     background-color: rgb(8, 127, 187);
 }
