@@ -20,8 +20,9 @@
     p#temporizador {
         text-align: center;
         font-family: 'Relogio Clock';
-        font-size: 6em;
+        font-size: 3.5em;
         margin-top: 40%;
+        font-weight: 590;
     }
 
     section#botoes {
@@ -35,7 +36,7 @@
     
 
     button {
-        padding: 33px;
+        padding: 20px;
     }
 
     button#iniciar {
@@ -232,6 +233,7 @@
     }
     
 }
+
 
 span#timer {
 text-align: right;

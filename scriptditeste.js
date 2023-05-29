@@ -7,12 +7,13 @@ buttonFinalizar.addEventListener('click', finalizarContagem);
 
 
 
+
 function iniciarContagem() {
     setInterval(function () {
 
         var soma = parseInt(timer) + 1;
         
-        var minutos = false;
+        
         if (soma < 10) {
             window.document.getElementById('timer').innerHTML = '00:0';
             window.document.getElementById('timer').innerHTML += soma;
@@ -38,11 +39,11 @@ function iniciarContagem() {
 
 
 function acrescentaMinutos() {
-    var soma = parseInt(timer) + 1;
+    var soma2 = parseInt(timer) + 1;
 
-    if(soma < 10) {
+    if(soma2 < 10) {
         window.document.getElementById('timer').innerHTML = '0';
-        window.document.getElementById('timer').innerHTML += soma;
+        window.document.getElementById('timer').innerHTML += soma2;
         window.document.getElementById('timer').innerHTML += ':00';
         timer = soma;
     }
