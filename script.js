@@ -3,11 +3,18 @@ let buttonFinalizar = window.document.getElementById('finalizar');
 let buttonReiniciar = window.document.getElementById('reiniciar');
 let buttonRetornar = window.document.getElementById('retornar');
 
+
 buttonIniciar.addEventListener('click', iniciarContagem);
 buttonFinalizar.addEventListener('click', finalizarContagem);
 buttonReiniciar.addEventListener('click', reiniciarContagem);
 buttonRetornar.addEventListener('click', retornarContagem);
 tempo = undefined;
+
+
+const chk = document.getElementById('chk');
+chk.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+})
 
 
 function iniciarContagem() {
