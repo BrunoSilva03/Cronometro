@@ -18,6 +18,7 @@
 
     
     p#temporizador {
+        position: relative;
         text-align: center;
         font-family: 'Relogio Clock';
         font-size: 3.5em;
@@ -25,11 +26,17 @@
         font-weight: 590;
     }
 
+    span {
+        position: relative;
+    }
+
     span#pontomilesimos {
+        position: relative;
         font-size: 1.5rem;
     }
 
     span#milesimos {
+        position: relative;
         font-size: 1.5rem;
     }
 
@@ -88,17 +95,24 @@
 
 @media (min-width: 601px) and (max-width: 768px) {
     p#temporizador {
+        position: relative;
         text-align: center;
         font-family: 'Relogio Clock';
         font-size: 9em;
         margin-top: 30%;
     }
 
+    span {
+        position: relative;
+    }
+
     span#pontomilesimos {
+        position: relative;
         font-size: 3rem;
     }
 
     span#milesimos {
+        position: relative;
         font-size: 3rem;
     }
 
@@ -152,6 +166,7 @@
 
 @media (min-width: 769px) and (max-width: 992px) {
     p#temporizador {
+        position: relative;
         text-align: center;
         font-family: 'Relogio Clock';
         font-size: 9em;
@@ -159,11 +174,17 @@
         
     }
 
+    span {
+        position: relative;
+    }
+
     span#pontomilesimos {
+        position: relative;
         font-size: 3rem;
     }
 
     span#milesimos {
+        position: relative;
         font-size: 3rem;
     }
 
@@ -229,17 +250,24 @@
     }
 
     p#temporizador {
+        position: relative;
         text-align: center;
         font-family: 'Relogio Clock';
         font-size: 10em;
         margin-top: 10%;
     }
 
+    span {
+        position: relative;
+    }
+
     span#pontomilesimos {
+        position: relative;
         font-size: 3rem;
     }
 
     span#milesimos {
+        position: relative;
         font-size: 3rem;
     }
     

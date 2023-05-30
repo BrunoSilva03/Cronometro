@@ -50,15 +50,23 @@ function contaMilesimos() {
         var newMilesimos = milesimos.replace('.','');
         var somaMilesimos = parseInt(newMilesimos) + 1;
 
-        if(somaMilesimos >= 99) {
+        if(somaMilesimos >= 999) {
             somaMilesimos = 0;
         }
 
         if(somaMilesimos < 10) {
             mil = window.document.getElementById('milesimos').innerHTML;
-            mil = ".0";
+            mil = ".00";
             mil += somaMilesimos;
             window.document.getElementById('milesimos').innerHTML = mil;
+
+        } else if (somaMilesimos >= 10 && somaMilesimos < 100){
+            milmil = window.document.getElementById('milesimos').innerHTML;
+            milmil = ".0";
+            milmil += somaMilesimos;
+            window.document.getElementById('milesimos').innerHTML = milmil;
+            
+            
         } else {
             window.document.getElementById('milesimos').innerHTML = "."
             window.document.getElementById('milesimos').innerHTML += somaMilesimos;
@@ -244,7 +252,7 @@ function zerarValoresTimer() {
     window.document.getElementById('spandoispontos').innerHTML = "00";
     window.document.getElementById('minutos').innerHTML = "00";
     window.document.getElementById('segundos').innerHTML = "00";
-    window.document.getElementById('milesimos').innerHTML = ".00";
+    window.document.getElementById('milesimos').innerHTML = ".000";
 
     window.document.getElementById('reiniciar').hidden = true;
     window.document.getElementById('retornar').hidden = true;
