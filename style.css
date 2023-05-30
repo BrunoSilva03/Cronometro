@@ -25,6 +25,14 @@
         font-weight: 590;
     }
 
+    span#pontomilesimos {
+        font-size: 1.5rem;
+    }
+
+    span#milesimos {
+        font-size: 1.5rem;
+    }
+
     section#botoes {
         display: flex;
         justify-content: center;
@@ -86,6 +94,14 @@
         margin-top: 30%;
     }
 
+    span#pontomilesimos {
+        font-size: 3rem;
+    }
+
+    span#milesimos {
+        font-size: 3rem;
+    }
+
     section#botoes {
         display: flex;
         justify-content: center;
@@ -141,6 +157,14 @@
         font-size: 9em;
         margin-top: 20%;
         
+    }
+
+    span#pontomilesimos {
+        font-size: 3rem;
+    }
+
+    span#milesimos {
+        font-size: 3rem;
     }
 
     section#botoes {
@@ -209,6 +233,14 @@
         font-family: 'Relogio Clock';
         font-size: 10em;
         margin-top: 10%;
+    }
+
+    span#pontomilesimos {
+        font-size: 3rem;
+    }
+
+    span#milesimos {
+        font-size: 3rem;
     }
     
     section#botoes {

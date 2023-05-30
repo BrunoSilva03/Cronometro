@@ -11,10 +11,13 @@ tempo = undefined;
 
 
 function iniciarContagem() {
+    window.document.getElementById('iniciar').hidden = true;
+    window.document.getElementById('reiniciar').hidden = false;
+
+    contaMilesimos();
 
     tempo = setInterval(function () {
-        window.document.getElementById('iniciar').hidden = true;
-        window.document.getElementById('reiniciar').hidden = false;
+
         var segundos = window.document.getElementById('segundos').innerHTML;
         var soma = parseInt(segundos) + 1;
 
@@ -38,6 +41,32 @@ function iniciarContagem() {
 
     }, 1000);
 
+}
+
+function contaMilesimos() {
+    var miles = "00"
+    tempoMilesimos = setInterval(function() {
+        var milesimos = window.document.getElementById('milesimos').innerHTML;
+
+        if(milesimos == ".00") {
+            milesimos = "00";
+        }
+        var somaMilesimos = parseInt(milesimos) + 1;
+
+        if(somaMilesimos >= 60) {
+            somaMilesimos = 0;
+        }
+
+        if(somaMilesimos < 10) {
+            mil = window.document.getElementById('milesimos').innerHTML;
+            mil = ".0";
+            mil += somaMilesimos;
+            window.document.getElementById('milesimos').innerHTML = mil;
+        } else {
+            window.document.getElementById('milesimos').innerHTML = "."
+            window.document.getElementById('milesimos').innerHTML += somaMilesimos;
+        }
+    }, 1);
 }
 
 function maisUmMinuto() {
@@ -174,6 +203,7 @@ function finalizarContagem() {
 
 
         clearInterval(tempo);
+        clearInterval(tempoMilesimos);
 
         window.document.getElementById('finalizar').hidden = true;
         window.document.getElementById('retornar').hidden = false;
@@ -217,6 +247,7 @@ function zerarValoresTimer() {
     window.document.getElementById('spandoispontos').innerHTML = "00";
     window.document.getElementById('minutos').innerHTML = "00";
     window.document.getElementById('segundos').innerHTML = "00";
+    window.document.getElementById('milesimos').innerHTML = "00";
 
     window.document.getElementById('reiniciar').hidden = true;
     window.document.getElementById('retornar').hidden = true;
