@@ -44,16 +44,13 @@ function iniciarContagem() {
 }
 
 function contaMilesimos() {
-    var miles = "00"
     tempoMilesimos = setInterval(function() {
         var milesimos = window.document.getElementById('milesimos').innerHTML;
 
-        if(milesimos == ".00") {
-            milesimos = "00";
-        }
-        var somaMilesimos = parseInt(milesimos) + 1;
+        var newMilesimos = milesimos.replace('.','');
+        var somaMilesimos = parseInt(newMilesimos) + 1;
 
-        if(somaMilesimos >= 60) {
+        if(somaMilesimos >= 99) {
             somaMilesimos = 0;
         }
 
@@ -247,7 +244,7 @@ function zerarValoresTimer() {
     window.document.getElementById('spandoispontos').innerHTML = "00";
     window.document.getElementById('minutos').innerHTML = "00";
     window.document.getElementById('segundos').innerHTML = "00";
-    window.document.getElementById('milesimos').innerHTML = "00";
+    window.document.getElementById('milesimos').innerHTML = ".00";
 
     window.document.getElementById('reiniciar').hidden = true;
     window.document.getElementById('retornar').hidden = true;
